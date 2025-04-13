@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #2b2d42;
+  }
+  
+  header p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .search-section input {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    border: 2px solid #2b2d42;
+    border-radius: 8px;
+  }
+  
+  .search-section button {
+    padding: 10px 20px;
+    background-color: #2b2d42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-section button:hover {
+    background-color: #1e2135;
+  }
+  
+  .result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .result-section img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .result-section h2 {
+    margin: 10px 0;
+    color: #2b2d42;
+  }
+
+  .result-section h3 {
+    margin-top: 15px;
+    color: #2b2d42;
+    font-size: 1.2rem;
+  }
+  
+  .result-section ul {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+  
+  .result-section ul li {
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #f1f3f5;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .result-section p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .error-message {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 40px;
+  }
+  
