@@ -53,3 +53,17 @@ function buscarPokemon() {
       errorMessage.classList.remove('hidden');
     });
 }
+
+// Al presionar Enter dentro del input, ejecuta la búsqueda
+document.getElementById('searchInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      buscarPokemon();
+    }
+  });
+  
+  // Al hacer clic en el logo, recarga la página
+  document.getElementById('logo').addEventListener('click', function (e) {
+    e.preventDefault(); // evita el salto al tope
+    window.location.reload();
+  });
+  
