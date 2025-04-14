@@ -24,25 +24,29 @@ function buscarPokemon() {
       return response.json();
     })
     .then(data => {
-      const nombre = data.name.toUpperCase();
-      const imagen = data.sprites.front_default;
-      const tipos = data.types.map(t => t.type.name).join(', ');
-      const habilidades = data.abilities.map(a => a.ability.name).join(', ');
-      // Obtener estadísticas
-      const stats = data.stats.map(stat => {
-        return `<li><strong>${stat.stat.name}:</strong> ${stat.base_stat}</li>`;
-      }).join('');
-
-      resultSection.innerHTML = `
-        <img src="${imagen}" alt="Imagen de ${nombre}" />
-        <h2>${nombre}</h2>
-        <p><strong>Tipo:</strong> ${tipos}</p>
-        <p><strong>Habilidades:</strong> ${habilidades}</p>
-        <h3>Estadísticas</h3>
-        <ul style="list-style: none; padding-left: 0;">
-          ${stats}
-        </ul>
-      `;
+        const nombre = data.name.toUpperCase();
+        const imagen = data.sprites.front_default;
+        const tipos = data.types.map(t => t.type.name).join(', ');
+        const habilidades = data.abilities.map(a => a.ability.name).join(', ');
+        // Obtener estadísticas
+        const stats = data.stats.map(stat => {
+          return `<li><strong>${stat.stat.name}:</strong> ${stat.base_stat}</li>`;
+        }).join('');
+      
+        resultSection.innerHTML = `
+          <div class="pokemon-info">
+            <img src="${imagen}" alt="Imagen de ${nombre}" />
+            <div class="pokemon-details">
+              <h2>${nombre}</h2>
+              <p><strong>Tipo:</strong> ${tipos}</p>
+              <p><strong>Habilidades:</strong> ${habilidades}</p>
+              <h3>Estadísticas</h3>
+              <ul style="list-style: none; padding-left: 0;">
+                ${stats}
+              </ul>
+            </div>
+          </div>
+        `;      
     })
     .catch(error => {
       errorMessage.textContent = 'No se encontró el Pokémon. Intenta con otro nombre. O revisa que este escrito correctamente';

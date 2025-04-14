@@ -15,8 +15,16 @@
   }
   
   header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
     margin-bottom: 30px;
+  }
+  
+  header img.logo {
+    width: 65px;
+    height: 65px;
   }
   
   header h1 {
@@ -68,46 +76,52 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    max-width: 900px;
     width: 100%;
   }
   
-  .result-section img {
+  .pokemon-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .pokemon-info img {
     width: 200px;
     height: 200px;
+    margin-right: 20px;
   }
   
-  .result-section h2 {
-    margin: 10px 0;
+  .pokemon-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pokemon-details h2 {
+    margin: 0;
     color: #2b2d42;
   }
-
-  .result-section h3 {
-    margin-top: 15px;
-    color: #2b2d42;
-    font-size: 1.2rem;
-  }
   
-  .result-section ul {
-    margin-top: 10px;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-  }
-  
-  .result-section ul li {
-    font-size: 0.95rem;
-    color: #555;
-    background-color: #f1f3f5;
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    border-radius: 8px;
-    text-align: left;
-  }
-  
-  .result-section p {
+  .pokemon-details p, .pokemon-details h3 {
     font-size: 1rem;
     color: #555;
+  }
+  
+  .pokemon-details ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .pokemon-details ul li {
+    padding: 5px 0;
+  }
+  
+  .pokemon-details strong {
+    color: #2b2d42;
   }
   
   .error-message {
@@ -126,5 +140,46 @@
     font-size: 0.9rem;
     color: #777;
     padding-top: 40px;
+    background-color: #2b2d42;
+    color: white;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer .social-links {
+    margin: 10px 0;
+  }
+  
+  footer .social-icon {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer .social-icon:hover {
+    color: #f39c12;
+  }
+  
+  @media (max-width: 768px) {
+    .pokemon-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pokemon-info img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .pokemon-details {
+      align-items: center;
+      text-align: center;
+    }
   }
   
