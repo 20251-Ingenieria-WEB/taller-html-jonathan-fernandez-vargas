@@ -116,6 +116,7 @@ function buscarPokemon() {
 
 // Ejecuta búsqueda al presionar Enter
 // Recarga la página si se hace clic en el logo
+```
 
 ---
 
