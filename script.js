@@ -1,5 +1,10 @@
+//Escucha clics en el botón para ejecutar la función principal.
 document.getElementById('searchButton').addEventListener('click', buscarPokemon);
 
+//Esta función:
+//Toma el valor ingresado.
+//Llama a la PokéAPI con fetch.
+//Si encuentra al Pokémon, muestra nombre, imagen, tipo, habilidades y estadísticas. Si no lo encuentra, muestra un mensaje de error.
 function buscarPokemon() {
   const nombre = document.getElementById('searchInput').value.toLowerCase().trim();
   const resultSection = document.getElementById('result');
@@ -35,7 +40,7 @@ function buscarPokemon() {
       
         resultSection.innerHTML = `
           <div class="pokemon-info">
-            <img src="${imagen}" alt="Imagen de ${nombre}" />
+            <img src="${imagen}" alt="Imagen de ${nombre}" class="pokemon-image" />
             <div class="pokemon-details">
               <h2>${nombre}</h2>
               <p><strong>Tipo:</strong> ${tipos}</p>
@@ -66,4 +71,3 @@ document.getElementById('searchInput').addEventListener('keydown', function (e) 
     e.preventDefault(); // evita el salto al tope
     window.location.reload();
   });
-  
