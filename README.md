@@ -57,13 +57,13 @@ _A series of step-by-step examples that tells you what you need to run to get a 
 _Clone repository_
 
 ```
-git clone https://github.com/user/repository-name.git
+git clone https://github.com/20251-Ingenieria-WEB/taller-html-jonathan-fernandez-vargas.git
 ```
 
 _Verify cloning_
 
 ```
-cd repository-name
+cd taller-html-jonathan-fernandez-vargas
 ```
 
 ---
